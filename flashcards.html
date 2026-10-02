@@ -1,56 +1,174 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flashcards A1 — KAB</title>
+  <title>بطاقات A1 — KAB</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script data-goatcounter="https://kab-resources.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
+
+  <style>
+ body, .font-display { font-family: 'Noto Sans Arabic', system-ui, sans-serif; }
+.korean { font-family: 'Noto Sans KR', 'Noto Sans Arabic', sans-serif; direction: ltr; }
+
+.flashcard {
+  width: 100%;
+  max-width: 720px;
+  height: 420px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  perspective: 1400px;
+  -webkit-perspective: 1400px;
+}
+@media (max-width: 640px) {
+  .flashcard { height: 65vw; max-height: 400px; min-height: 280px; }
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.flashcard.is-flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  overflow: hidden;
+
+  /* iOS + Chrome fix */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0.1px);
+  transform: translateZ(0.1px);
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+@media (min-width: 640px) {
+  .flashcard-face { padding: 32px; }
+}
+
+.flashcard-front {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 20px 60px -20px rgba(0,0,0,0.15);
+}
+
+.flashcard-back {
+  background: linear-gradient(135deg, #f04e23, #d93a10);
+  color: #ffffff;
+  box-shadow: 0 20px 60px -20px rgba(240,78,35,0.5);
+  transform: rotateY(180deg) translateZ(0.1px);
+}
+
+.card-text {
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+.card-text-korean { font-size: clamp(3rem, 12vw, 7rem); }
+.card-text-arabic { font-size: clamp(2.5rem, 10vw, 6rem); }
+
+/* Fallback safety net — if the browser STILL shows both faces, opacity kills the back */
+.flashcard .flashcard-back { opacity: 0; transition: opacity 0.35s ease; }
+.flashcard.is-flipped .flashcard-back { opacity: 1; }
+.flashcard .flashcard-front { opacity: 1; transition: opacity 0.35s ease; }
+.flashcard.is-flipped .flashcard-front { opacity: 0; }
+  </style>
 </head>
 <body class="font-sans bg-[#fafaf7] text-neutral-900 antialiased min-h-screen flex flex-col">
 
+  <!-- NAV -->
   <nav class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-neutral-200/60">
-    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-kab-500 text-white font-display font-extrabold text-sm shadow-lg shadow-kab-500/30">KAB</span>
-        <span class="font-display font-bold tracking-tight">Flashcards A1</span>
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-kab-500 text-white font-display font-extrabold text-sm shadow-lg shadow-kab-500/30">KAB</span>
+        <span class="font-display font-bold tracking-tight">بطاقات A1</span>
       </a>
-      <a href="index.html" class="text-sm text-neutral-600 hover:text-neutral-900 link-underline">← Back to hub</a>
+      <a href="index.html" class="text-sm text-neutral-600 hover:text-neutral-900 link-underline">← العودة</a>
     </div>
   </nav>
 
-  <main class="flex-1 max-w-2xl mx-auto w-full px-6 py-10 flex flex-col items-center">
+  <!-- MAIN -->
+  <main class="flex-1 w-full flex flex-col items-center px-6 py-10 sm:py-14">
 
-    <p class="text-sm text-neutral-500 mb-4">
-      Card <span id="card-current">1</span> of <span id="card-total">0</span>
-    </p>
+    <!-- Progress row -->
+    <div class="w-full max-w-3xl flex items-center justify-between mb-8">
+      <p class="text-sm text-neutral-500 whitespace-nowrap">
+        بطاقة <span id="card-current" class="font-bold text-neutral-900">1</span>
+        <span class="text-neutral-300">/</span>
+        <span id="card-total">0</span>
+      </p>
 
-    <!-- Flashcard -->
-    <div id="card" class="relative w-full aspect-[4/3] max-w-md cursor-pointer" style="perspective: 1200px;">
-      <div id="card-inner" class="relative w-full h-full transition-transform duration-500" style="transform-style: preserve-3d;">
-        <div class="absolute inset-0 rounded-2xl bg-white border border-neutral-200 shadow-xl flex items-center justify-center p-8 text-center" style="backface-visibility: hidden;">
-          <span id="card-front" class="font-display font-extrabold text-4xl">안녕하세요</span>
+      <div class="flex-1 mx-6 h-1.5 rounded-full bg-neutral-200 overflow-hidden">
+        <div id="progress-bar" class="h-full bg-kab-500 rounded-full transition-all duration-500" style="width: 0%"></div>
+      </div>
+
+      <button id="shuffle-top" class="text-sm text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-1.5 whitespace-nowrap">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+        خلط
+      </button>
+    </div>
+
+    <!-- THE CARD -->
+    <div id="card" class="flashcard">
+      <div class="flashcard-inner">
+
+        <!-- FRONT (Korean) -->
+        <div class="flashcard-face flashcard-front">
+          <span id="card-front" class="korean font-display font-extrabold text-6xl sm:text-7xl md:text-8xl">안녕하세요</span>
         </div>
-        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-kab-500 to-kab-600 text-white shadow-xl flex items-center justify-center p-8 text-center" style="backface-visibility: hidden; transform: rotateY(180deg);">
-          <div>
-            <p id="card-back" class="font-display font-extrabold text-3xl">Hello</p>
-            <p id="card-roman" class="text-white/80 mt-2 text-lg">annyeonghaseyo</p>
-          </div>
+
+        <!-- BACK (Arabic) -->
+        <div class="flashcard-face flashcard-back">
+          
+          <p id="card-back" class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl">مرحباً</p>
         </div>
+
       </div>
     </div>
 
-    <p class="text-xs text-neutral-400 mt-6">Click card to flip · Arrow keys to navigate</p>
+    <!-- CONTROLS -->
+    <div class="w-full max-w-3xl flex items-center justify-between gap-4 mt-10">
+      <button id="prev" class="group h-14 px-6 rounded-2xl bg-white border border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50 text-neutral-800 font-semibold flex items-center justify-center gap-2 transition-all btn-press">
+        <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        السابق
+      </button>
 
-    <!-- Controls -->
-    <div class="flex gap-3 mt-6">
-      <button id="prev" class="px-5 py-2.5 rounded-xl bg-white border border-neutral-200 font-semibold text-neutral-800 hover:bg-neutral-50 btn-press">← Prev</button>
-      <button id="shuffle" class="px-5 py-2.5 rounded-xl bg-neutral-900 text-white font-semibold hover:bg-neutral-800 btn-press">Shuffle</button>
-      <button id="next" class="px-5 py-2.5 rounded-xl bg-kab-500 text-white font-semibold hover:bg-kab-600 btn-press">Next →</button>
+      <div class="hidden sm:flex items-center gap-2 text-xs text-neutral-400">
+        <kbd class="px-2 py-1 rounded-md bg-neutral-100 border border-neutral-200 font-mono">←</kbd>
+        <kbd class="px-2 py-1 rounded-md bg-neutral-100 border border-neutral-200 font-mono">→</kbd>
+        <kbd class="px-2 py-1 rounded-md bg-neutral-100 border border-neutral-200 font-mono text-[10px]">Space</kbd>
+      </div>
+
+      <button id="next" class="group h-14 px-6 rounded-2xl bg-kab-500 hover:bg-kab-600 text-white font-semibold shadow-lg shadow-kab-500/30 flex items-center justify-center gap-2 transition-all btn-press">
+        التالي
+        <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
     </div>
 
   </main>

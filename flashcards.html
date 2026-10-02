@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards A1 — KAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script data-goatcounter="https://kab-resources.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body class="font-sans bg-[#fafaf7] text-neutral-900 antialiased min-h-screen flex flex-col">
+
+  <nav class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-neutral-200/60">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-kab-500 text-white font-display font-extrabold text-sm shadow-lg shadow-kab-500/30">KAB</span>
+        <span class="font-display font-bold tracking-tight">Flashcards A1</span>
+      </a>
+      <a href="index.html" class="text-sm text-neutral-600 hover:text-neutral-900 link-underline">← Back to hub</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-2xl mx-auto w-full px-6 py-10 flex flex-col items-center">
+
+    <p class="text-sm text-neutral-500 mb-4">
+      Card <span id="card-current">1</span> of <span id="card-total">0</span>
+    </p>
+
+    <!-- Flashcard -->
+    <div id="card" class="relative w-full aspect-[4/3] max-w-md cursor-pointer" style="perspective: 1200px;">
+      <div id="card-inner" class="relative w-full h-full transition-transform duration-500" style="transform-style: preserve-3d;">
+        <div class="absolute inset-0 rounded-2xl bg-white border border-neutral-200 shadow-xl flex items-center justify-center p-8 text-center" style="backface-visibility: hidden;">
+          <span id="card-front" class="font-display font-extrabold text-4xl">안녕하세요</span>
+        </div>
+        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-kab-500 to-kab-600 text-white shadow-xl flex items-center justify-center p-8 text-center" style="backface-visibility: hidden; transform: rotateY(180deg);">
+          <div>
+            <p id="card-back" class="font-display font-extrabold text-3xl">Hello</p>
+            <p id="card-roman" class="text-white/80 mt-2 text-lg">annyeonghaseyo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs text-neutral-400 mt-6">Click card to flip · Arrow keys to navigate</p>
+
+    <!-- Controls -->
+    <div class="flex gap-3 mt-6">
+      <button id="prev" class="px-5 py-2.5 rounded-xl bg-white border border-neutral-200 font-semibold text-neutral-800 hover:bg-neutral-50 btn-press">← Prev</button>
+      <button id="shuffle" class="px-5 py-2.5 rounded-xl bg-neutral-900 text-white font-semibold hover:bg-neutral-800 btn-press">Shuffle</button>
+      <button id="next" class="px-5 py-2.5 rounded-xl bg-kab-500 text-white font-semibold hover:bg-kab-600 btn-press">Next →</button>
+    </div>
+
+  </main>
+
+  <script src="flashcards.js"></script>
+</body>
+</html>

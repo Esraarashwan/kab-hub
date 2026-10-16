@@ -109,27 +109,11 @@
       </span>
     </div>
 
-    <!-- ============ TABS ============ -->
-    <div class="reveal mb-10 flex flex-wrap gap-2 p-1.5 rounded-2xl bg-white/70 backdrop-blur border border-neutral-200/80 shadow-sm w-fit">
-      <button data-tab="a1" class="tab-btn active inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all btn-press">
-        <span class="tab-dot"></span>
-        A1
-      </button>
-      <button data-tab="a2" class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all btn-press">
-        <span class="tab-dot"></span>
-        A2
-      </button>
-      <button data-tab="sentences" class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all btn-press">
-        <span class="tab-dot"></span>
-        Sentence Structure
-      </button>
-    </div>
-
-    <!-- SERIES GRID (FILTERED BY TABS) -->
+    <!-- SERIES GRID (ALL 3 VISIBLE) -->
     <div id="series-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
 
       <!-- A1 Series -->
-      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-level="a1" data-material="A1 Level 1 Lessons">
+      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="A1 Level 1 Lessons">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-kab-100 via-kab-50 to-amber-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">A1</span>
@@ -137,16 +121,16 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">A1 Level 1 Lessons</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">Hey! Start your series journey here. This is Level 1 lessons for absolute beginners.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">Hey! Start your series journey here. This is Level 1 lessons for absolute beginners.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/KAB A1 Lesson 01 - Introducing Yourself.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
-            <a href="materials/KAB A1 Lesson 01 - Introducing Yourself.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="A1 Level 1 Lessons">Start Series</a>
+            <a href="a1-series.html" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View List</a>
+            <a href="a1-series.html" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press">Start Series</a>
           </div>
         </div>
       </article>
 
       <!-- A2 Series -->
-      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm hidden-card" data-level="a2" data-material="A2 Level 2 Lessons">
+      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="A2 Level 2 Lessons">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">A2</span>
@@ -154,16 +138,16 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">A2 Level 2 Lessons</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">Continue your series journey here. This is Level 2 lessons for elementary learners.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">Continue your series journey here. This is Level 2 lessons for elementary learners.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/KAB A2 Lesson 01 - Personality & Relationships.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
-            <a href="materials/KAB A2 Lesson 01 - Personality & Relationships.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="A2 Level 2 Lessons">Start Series</a>
+            <a href="a2-series.html" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View List</a>
+            <a href="a2-series.html" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press">Start Series</a>
           </div>
         </div>
       </article>
 
       <!-- Sentence Structure Series -->
-      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm hidden-card" data-level="sentences" data-material="Sentence Structure Series">
+      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Sentence Structure Series">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-kab-900 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-400/60">문장</span>
@@ -171,10 +155,10 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Sentence Structure Series</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">Master sentence building. This is the Sentence Structure series.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">Master sentence building. This is the Sentence Structure series.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/20 Examples of Sentence Expansion 001.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
-            <a href="materials/20 Examples of Sentence Expansion 001.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Sentence Structure Series">Start Series</a>
+            <a href="sentence-series.html" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View List</a>
+            <a href="sentence-series.html" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press">Start Series</a>
           </div>
         </div>
       </article>
@@ -199,7 +183,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Hobbies</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الهوايات — الأفعال والتعبيرات.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">الهوايات — الأفعال والتعبيرات.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-hobbies.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-hobbies.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hobbies">PDF</a>
@@ -216,7 +200,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Family</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">العائلة — الأفراد والعلاقات.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">العائلة — الأفراد والعلاقات.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-family.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-family.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Family">PDF</a>
@@ -233,7 +217,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Colors</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الألوان ووصف الأشياء.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">الألوان ووصف الأشياء.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-colors.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-colors.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Colors">PDF</a>
@@ -250,7 +234,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Body</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">جسم الإنسان والأوجاع.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">جسم الإنسان والأوجاع.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-body.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-body.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Body">PDF</a>
@@ -267,7 +251,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">House</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">البيت والغرف والأثاث.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">البيت والغرف والأثاث.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-house.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-house.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="House">PDF</a>
@@ -284,7 +268,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Jobs</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">المهن والعمل.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">المهن والعمل.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-jobs.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-jobs.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Jobs">PDF</a>
@@ -301,7 +285,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Verbs</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الأفعال الأساسية وتصريفها.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">الأفعال الأساسية وتصريفها.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-verbs.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-verbs.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Verbs">PDF</a>
@@ -318,7 +302,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Adjectives</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الصفات — وصف الأشخاص والأشياء.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">الصفات — وصف الأشخاص والأشياء.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-adjectives.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-adjectives.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Adjectives">PDF</a>
@@ -335,7 +319,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Hospital</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">عند الطبيب — وصف الأعراض.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">عند الطبيب — وصف الأعراض.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-hospital.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-hospital.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hospital">PDF</a>
@@ -352,7 +336,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Shopping</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">التسوق — الأسعار والمقاسات.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">التسوق — الأسعار والمقاسات.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-shopping.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-shopping.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Shopping">PDF</a>
@@ -369,7 +353,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Emotions</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">المشاعر — الفرح والحزن والقلق.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">المشاعر — الفرح والحزن والقلق.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-emotions.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-emotions.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Emotions">PDF</a>
@@ -386,7 +370,7 @@
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Hobbies Advanced</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الهوايات المتقدمة — رياضات وأنشطة.</p>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed" dir="rtl">الهوايات المتقدمة — رياضات وأنشطة.</p>
           <div class="mt-5 flex gap-2">
             <a href="materials/korean-hobbies-plus.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
             <a href="materials/korean-hobbies-plus.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hobbies+">PDF</a>
@@ -448,45 +432,7 @@
     </div>
   </div>
 
-  <!-- Tab styles -->
-  <style>
-    .tab-btn { color: #6b6b6b; background: transparent; }
-    .tab-btn:hover { color: #171310; background: rgba(0,0,0,0.04); }
-    .tab-btn.active { background: #C9461F; color: #fff; box-shadow: 0 4px 14px rgba(201,70,31,0.25); }
-    .tab-btn .tab-dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; opacity: .5; }
-    .tab-btn.active .tab-dot { opacity: 1; }
-    .material-card.hidden-card { display: none; }
-  </style>
-
-  <!-- Tab script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.tab-btn');
-      const seriesCards = document.querySelectorAll('#series-grid .material-card');
-
-      function filter(level) {
-        seriesCards.forEach(card => {
-          if (card.dataset.level === level) {
-            card.classList.remove('hidden-card');
-          } else {
-            card.classList.add('hidden-card');
-          }
-        });
-      }
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          buttons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          filter(btn.dataset.tab);
-        });
-      });
-
-      // Default to A1 on load
-      filter('a1');
-    });
-  </script>
-
   <script src="app.js"></script>
+
 </body>
 </html>

@@ -114,7 +114,7 @@
   /* Update stat chips */
   const statDownloads = document.getElementById('stat-downloads');
   const statMaterials = document.getElementById('stat-materials');
-  const totalDownloads = Object.values(stats.downloads).reduce((a, b) => a + b, 0);
+  const totalDownloads = 2164 + Object.values(stats.downloads).reduce((a, b) => a + b, 0);
 
   if (statDownloads) animateNumber(statDownloads, totalDownloads);
   if (statMaterials) {

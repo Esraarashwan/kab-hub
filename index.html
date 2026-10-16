@@ -6,15 +6,11 @@
   <title>KAB — Free Korean Resources</title>
   <meta name="description" content="Free Korean learning materials — verbs, particles, vocabulary and more." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Compiled Tailwind -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- GoatCounter analytics -->
   <script data-goatcounter="https://kab-resources.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -88,7 +84,7 @@
         </div>
         <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
           <span class="text-kab-500">⬇️</span>
-          <span class="font-semibold text-neutral-900" id="stat-downloads">0</span>
+          <span class="font-semibold text-neutral-900" id="stat-downloads">2164</span>
           <span class="text-neutral-500">downloads</span>
         </div>
         <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
@@ -102,10 +98,10 @@
 
   <!-- MATERIALS -->
   <section id="materials" class="relative max-w-6xl mx-auto px-6 pb-24">
-    <div class="reveal flex items-end justify-between mb-10">
+    <div class="reveal flex items-end justify-between mb-8">
       <div>
         <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">Study materials</h2>
-        <p class="text-neutral-600 mt-2">Pick a topic. View it, or grab the PDF.</p>
+        <p class="text-neutral-600 mt-2">Pick a level to start your journey, or browse all resources.</p>
       </div>
       <span class="hidden sm:inline-flex items-center gap-1.5 text-sm text-neutral-500">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
@@ -113,279 +109,287 @@
       </span>
     </div>
 
-    <div id="materials-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- ============ CARD 6 — Hobbies ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Hobbies" style="--delay:250ms">
+    <!-- ============ TABS ============ -->
+    <div class="reveal mb-10 flex flex-wrap gap-2 p-1.5 rounded-2xl bg-white/70 backdrop-blur border border-neutral-200/80 shadow-sm w-fit">
+      <button data-tab="a1" class="tab-btn active inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all btn-press">
+        <span class="tab-dot"></span>
+        A1
+      </button>
+      <button data-tab="a2" class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all btn-press">
+        <span class="tab-dot"></span>
+        A2
+      </button>
+      <button data-tab="sentences" class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all btn-press">
+        <span class="tab-dot"></span>
+        Sentence Structure
+      </button>
+    </div>
+
+    <!-- SERIES GRID (FILTERED BY TABS) -->
+    <div id="series-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+      <!-- A1 Series -->
+      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-level="a1" data-material="A1 Level 1 Lessons">
+        <div class="shine"></div>
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-kab-100 via-kab-50 to-amber-50 flex items-center justify-center">
+          <span class="font-display font-extrabold text-6xl text-kab-500/40">A1</span>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Level 1</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">A1 Level 1 Lessons</h3>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">Hey! Start your series journey here. This is Level 1 lessons for absolute beginners.</p>
+          <div class="mt-5 flex gap-2">
+            <a href="materials/KAB A1 Lesson 01 - Introducing Yourself.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/KAB A1 Lesson 01 - Introducing Yourself.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="A1 Level 1 Lessons">Start Series</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- A2 Series -->
+      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm hidden-card" data-level="a2" data-material="A2 Level 2 Lessons">
+        <div class="shine"></div>
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
+          <span class="font-display font-extrabold text-6xl text-kab-500/40">A2</span>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Level 2</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">A2 Level 2 Lessons</h3>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">Continue your series journey here. This is Level 2 lessons for elementary learners.</p>
+          <div class="mt-5 flex gap-2">
+            <a href="materials/KAB A2 Lesson 01 - Personality & Relationships.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/KAB A2 Lesson 01 - Personality & Relationships.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="A2 Level 2 Lessons">Start Series</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sentence Structure Series -->
+      <article class="material-card card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm hidden-card" data-level="sentences" data-material="Sentence Structure Series">
+        <div class="shine"></div>
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-kab-900 flex items-center justify-center">
+          <span class="font-display font-extrabold text-6xl text-kab-400/60">문장</span>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Series</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Sentence Structure Series</h3>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">Master sentence building. This is the Sentence Structure series.</p>
+          <div class="mt-5 flex gap-2">
+            <a href="materials/20 Examples of Sentence Expansion 001.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/20 Examples of Sentence Expansion 001.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Sentence Structure Series">Start Series</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- OTHER RESOURCES HEADING -->
+    <div class="reveal mb-8 border-t border-neutral-200 pt-10">
+      <h3 class="font-display font-extrabold text-2xl tracking-tight">Other Resources</h3>
+      <p class="text-neutral-600 mt-1">Additional study sheets and vocabulary lists.</p>
+    </div>
+
+    <!-- OTHER RESOURCES GRID (ALWAYS VISIBLE) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Hobbies -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Hobbies">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">취미</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A1 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Hobbies</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الهوايات — الأفعال والتعبيرات.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-hobbies.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-hobbies.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hobbies">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-hobbies.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-hobbies.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hobbies">PDF</a>
           </div>
         </div>
       </article>
 
-      <!-- ============ CARD 7 — Family ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Family" style="--delay:300ms">
+      <!-- Family -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Family">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-kab-100 via-kab-50 to-amber-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">가족</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A1 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Family</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">العائلة — الأفراد والعلاقات.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-family.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-family.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Family">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-family.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-family.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Family">PDF</a>
           </div>
         </div>
       </article>
 
-      <!-- ============ CARD 8 — Verbs ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Verbs" style="--delay:350ms">
-        <div class="shine"></div>
-        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-amber-100 via-orange-50 to-kab-50 flex items-center justify-center">
-          <span class="font-display font-extrabold text-6xl text-kab-500/40">동사</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Grammar</div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Verbs</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الأفعال الأساسية وتصريفها.</p>
-          <div class="mt-5 flex gap-2">
-            <a href="materials/korean-verbs.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-verbs.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Verbs">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ============ CARD 9 — Adjectives ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Adjectives" style="--delay:400ms">
-        <div class="shine"></div>
-        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
-          <span class="font-display font-extrabold text-6xl text-kab-500/40">형용사</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Grammar</div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Adjectives</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الصفات — وصف الأشخاص والأشياء.</p>
-          <div class="mt-5 flex gap-2">
-            <a href="materials/korean-adjectives.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-adjectives.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Adjectives">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ============ CARD 10 — Colors ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Colors" style="--delay:450ms">
+      <!-- Colors -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Colors">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-kab-100 via-kab-50 to-amber-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">색깔</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A1 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Colors</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الألوان ووصف الأشياء.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-colors.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-colors.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Colors">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-colors.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-colors.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Colors">PDF</a>
           </div>
         </div>
       </article>
 
-      <!-- ============ CARD 11 — Body ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Body" style="--delay:500ms">
+      <!-- Body -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Body">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-amber-100 via-orange-50 to-kab-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">몸</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A1 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Body</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">جسم الإنسان والأوجاع.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-body.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-body.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Body">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-body.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-body.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Body">PDF</a>
           </div>
         </div>
       </article>
 
-      <!-- ============ CARD 12 — Hospital ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Hospital" style="--delay:550ms">
-        <div class="shine"></div>
-        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
-          <span class="font-display font-extrabold text-6xl text-kab-500/40">병원</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Hospital</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">عند الطبيب — وصف الأعراض.</p>
-          <div class="mt-5 flex gap-2">
-            <a href="materials/korean-hospital.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-hospital.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hospital">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ============ CARD 13 — Shopping ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Shopping" style="--delay:600ms">
-        <div class="shine"></div>
-        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-kab-100 via-kab-50 to-amber-50 flex items-center justify-center">
-          <span class="font-display font-extrabold text-6xl text-kab-500/40">쇼핑</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
-        </div>
-        <div class="p-5">
-          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Shopping</h3>
-          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">التسوق — الأسعار والمقاسات.</p>
-          <div class="mt-5 flex gap-2">
-            <a href="materials/korean-shopping.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-shopping.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Shopping">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ============ CARD 14 — House ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="House" style="--delay:650ms">
+      <!-- House -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="House">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-amber-100 via-orange-50 to-kab-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">집</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A1 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">House</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">البيت والغرف والأثاث.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-house.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-house.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="House">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-house.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-house.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="House">PDF</a>
           </div>
         </div>
       </article>
 
-      <!-- ============ CARD 15 — Jobs ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Jobs" style="--delay:700ms">
+      <!-- Jobs -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Jobs">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">직업</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A1 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Jobs</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">المهن والعمل.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-jobs.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-jobs.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Jobs">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-jobs.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-jobs.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Jobs">PDF</a>
           </div>
         </div>
       </article>
 
-      <!-- ============ CARD 16 — Emotions ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Emotions" style="--delay:750ms">
+      <!-- Verbs -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Verbs">
+        <div class="shine"></div>
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-amber-100 via-orange-50 to-kab-50 flex items-center justify-center">
+          <span class="font-display font-extrabold text-6xl text-kab-500/40">동사</span>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A2 · Grammar</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Verbs</h3>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الأفعال الأساسية وتصريفها.</p>
+          <div class="mt-5 flex gap-2">
+            <a href="materials/korean-verbs.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-verbs.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Verbs">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Adjectives -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Adjectives">
+        <div class="shine"></div>
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
+          <span class="font-display font-extrabold text-6xl text-kab-500/40">형용사</span>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A2 · Grammar</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Adjectives</h3>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الصفات — وصف الأشخاص والأشياء.</p>
+          <div class="mt-5 flex gap-2">
+            <a href="materials/korean-adjectives.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-adjectives.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Adjectives">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Hospital -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Hospital">
+        <div class="shine"></div>
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-kab-50 flex items-center justify-center">
+          <span class="font-display font-extrabold text-6xl text-kab-500/40">병원</span>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A2 · Lesson</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Hospital</h3>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">عند الطبيب — وصف الأعراض.</p>
+          <div class="mt-5 flex gap-2">
+            <a href="materials/korean-hospital.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-hospital.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hospital">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Shopping -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Shopping">
+        <div class="shine"></div>
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-kab-100 via-kab-50 to-amber-50 flex items-center justify-center">
+          <span class="font-display font-extrabold text-6xl text-kab-500/40">쇼핑</span>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A2 · Lesson</div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Shopping</h3>
+          <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">التسوق — الأسعار والمقاسات.</p>
+          <div class="mt-5 flex gap-2">
+            <a href="materials/korean-shopping.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-shopping.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Shopping">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Emotions -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Emotions">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-kab-100 via-kab-50 to-amber-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">감정</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A2 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Emotions</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">المشاعر — الفرح والحزن والقلق.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-emotions.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-emotions.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Emotions">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-emotions.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-emotions.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Emotions">PDF</a>
           </div>
         </div>
       </article>
 
-      <!-- ============ CARD 17 — Hobbies+ ============ -->
-      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Hobbies+" style="--delay:800ms">
+      <!-- Hobbies+ -->
+      <article class="card-3d reveal relative group bg-white rounded-2xl border border-neutral-200/80 overflow-hidden shadow-sm" data-material="Hobbies+">
         <div class="shine"></div>
         <div class="relative h-44 overflow-hidden bg-gradient-to-br from-amber-100 via-orange-50 to-kab-50 flex items-center justify-center">
           <span class="font-display font-extrabold text-6xl text-kab-500/40">취미+</span>
-          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">Lesson</div>
+          <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-bold uppercase tracking-wide text-kab-700 shadow-sm">A2 · Lesson</div>
         </div>
         <div class="p-5">
           <h3 class="font-display font-bold text-lg tracking-tight group-hover:text-kab-600 transition-colors">Hobbies Advanced</h3>
           <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed">الهوايات المتقدمة — رياضات وأنشطة.</p>
           <div class="mt-5 flex gap-2">
-            <a href="materials/korean-hobbies-plus.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              View
-            </a>
-            <a href="materials/korean-hobbies-plus.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hobbies+">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF
-            </a>
+            <a href="materials/korean-hobbies-plus.pdf" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm font-semibold transition-colors btn-press">View</a>
+            <a href="materials/korean-hobbies-plus.pdf" download class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-kab-500 hover:bg-kab-600 text-white text-sm font-semibold shadow-sm shadow-kab-500/30 transition-all btn-press" data-track="download" data-material="Hobbies+">PDF</a>
           </div>
         </div>
       </article>
@@ -408,7 +412,7 @@
         <div class="mt-10 grid sm:grid-cols-3 gap-6">
           <div>
             <div class="font-display font-extrabold text-3xl text-kab-400">01</div>
-            <p class="mt-1 text-sm text-neutral-300 font-medium">Pick a material</p>
+            <p class="mt-1 text-sm text-neutral-300 font-medium">Pick a level</p>
           </div>
           <div>
             <div class="font-display font-extrabold text-3xl text-kab-400">02</div>
@@ -443,6 +447,45 @@
       <span class="text-sm font-medium" id="toast-msg">Download started</span>
     </div>
   </div>
+
+  <!-- Tab styles -->
+  <style>
+    .tab-btn { color: #6b6b6b; background: transparent; }
+    .tab-btn:hover { color: #171310; background: rgba(0,0,0,0.04); }
+    .tab-btn.active { background: #C9461F; color: #fff; box-shadow: 0 4px 14px rgba(201,70,31,0.25); }
+    .tab-btn .tab-dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; opacity: .5; }
+    .tab-btn.active .tab-dot { opacity: 1; }
+    .material-card.hidden-card { display: none; }
+  </style>
+
+  <!-- Tab script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.tab-btn');
+      const seriesCards = document.querySelectorAll('#series-grid .material-card');
+
+      function filter(level) {
+        seriesCards.forEach(card => {
+          if (card.dataset.level === level) {
+            card.classList.remove('hidden-card');
+          } else {
+            card.classList.add('hidden-card');
+          }
+        });
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filter(btn.dataset.tab);
+        });
+      });
+
+      // Default to A1 on load
+      filter('a1');
+    });
+  </script>
 
   <script src="app.js"></script>
 </body>
